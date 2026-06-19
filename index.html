@@ -35,12 +35,9 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            
-            
-            
         }
 
-        /* Container designed for single A4 layout or modern web view */
+        /* Container */
         .profile-container {
             width: 100%;
             max-width: 800px;
@@ -57,9 +54,21 @@
             color: white;
             padding: 35px 40px;
             position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            object-fit: cover;
+            margin-right: 20px;
         }
 
         .header-content {
+            flex-grow: 1;
             display: table;
             width: 100%;
         }
@@ -106,7 +115,7 @@
             margin-left: 5px;
         }
 
-        /* Main Content Grid Layout using Tables for precise rendering support */
+        /* Body Content */
         .profile-body {
             padding: 30px 40px;
         }
@@ -165,7 +174,7 @@
             font-weight: 500;
         }
 
-        /* Special Styling for Colors */
+        /* Colors */
         .color-dot {
             display: inline-block;
             width: 12px;
@@ -178,7 +187,7 @@
         .color-red { background-color: var(--accent-red); }
         .color-black { background-color: var(--accent-dark); }
 
-        /* Pill / Tag Styling */
+        /* Pills */
         .pill-container {
             margin-top: 5px;
         }
@@ -198,16 +207,18 @@
         .pill.skill {
             background-color: #f0fdf4;
             color: #166534;
+            border: 1px solid #dcfce7;
         }
 
         .pill.activity {
             background-color: #faf5ff;
             color: #6b21a8;
+            border: 1px solid #f3e8ff;
         }
 
-        /* Quote / Motto Section */
+        /* Quote Section */
         .motto-box {
-            background-color: #f8fafc;
+            background-color: #f1f5f9;
             border-left: 4px solid var(--primary-color);
             padding: 15px 20px;
             border-radius: 0 8px 8px 0;
@@ -231,7 +242,7 @@
             font-weight: 600;
         }
 
-        /* Print optimization for A4 */
+        /* A4 Print */
         @media print {
             @page {
                 size: A4;
@@ -251,10 +262,10 @@
     </style>
 </head>
 <body>
-<img src="https://today-obs.line-scdn.net/0hEdfHxkQcGktbMQQ1itxlHGNnFjpoVwBCeV8CeH1iQHoiHQ9IZVBJKHZkFmcmVlUbe1ZdKis4ESlwUQ8eYA/w280" alt="คำอธิบายรูปภาพ" width="500" height="800">
+
     <div class="profile-container">
-        <!-- Header Section -->
-        <div class="profile-header">
+                <div class="profile-header">
+            <img src="https://today-obs.line-scdn.net/0hEdfHxkQcGktbMQQ1itxlHGNnFjpoVwBCeV8CeH1iQHoiHQ9IZVBJKHZkFmcmVlUbe1ZdKis4ESlwUQ8eYA/w280" alt="รูปโปรไฟล์ ธนกฤต ธนันชัย" class="header-img">
             <div class="header-content">
                 <div class="header-main">
                     <h1>ด.ช. ธนกฤต ธนันชัย <span class="nickname">อาร์ตี้</span></h1>
@@ -266,12 +277,10 @@
             </div>
         </div>
 
-        <!-- Body Content -->
-        <div class="profile-body">
+                <div class="profile-body">
             <div class="info-layout">
                 
-                <!-- Left Column: Personal & Academic Info -->
-                <div class="info-column">
+                                <div class="info-column">
                     <div class="section">
                         <div class="section-title">ข้อมูลส่วนตัวทั่วไป</div>
                         <div class="info-item">
@@ -312,74 +321,4 @@
                         </div>
                         <div class="info-item">
                             <span class="info-label">เพื่อนสนิท:</span>
-                            <span class="info-value">ลลิตา</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">ความฝัน/อาชีพ:</span>
-                            <span class="info-value">-</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Preferences & Skills -->
-                <div class="info-column">
-                    <div class="section">
-                        <div class="section-title">ไลฟ์สไตล์ & ของโปรด</div>
-                        <div class="info-item">
-                            <span class="info-label">อาหารโปรด:</span>
-                            <span class="info-value">แซลม่อน</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">กีฬา:</span>
-                            <span class="info-value">ฟุตบอล</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">งานอดิเรก:</span>
-                            <span class="info-value">เล่นเกม</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">เพลงที่ชอบ:</span>
-                            <span class="info-value">เพลงเบาๆ เพราะๆ</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">ซีรีส์ / อนิเมะ:</span>
-                            <span class="info-value">One Piece</span>
-                        </div>
-                        <div class="info-item">
-                            <span class="info-label">สีที่ชอบ:</span>
-                            <span class="info-value">
-                                <span class="color-dot color-red"></span>แดง, 
-                                <span class="color-dot color-black"></span>ดำ
-                            </span>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <div class="section-title">ทักษะและความสามารถ</div>
-                        <div class="pill-container">
-                            <span class="pill skill">วิ่งเร็ว</span>
-                            <span class="pill skill">คิดเร็ว</span>
-                        </div>
-                    </div>
-
-                    <div class="section">
-                        <div class="section-title">ชมรม</div>
-                        <div class="pill-container">
-                            <span class="pill activity">ชมรมหุ่นยนต์</span>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Motto Section Across Full Width at Bottom -->
-            <div class="motto-box">
-                <div class="motto-title">คติประจำใจ</div>
-                <div class="motto-text">“ ทุกเส้นทางที่เราเลือกเดินล้วนมีจุดหมายเดียวกัน ”</div>
-            </div>
-
-        </div>
-    </div>
-
-</body>
-</html>
+                           http://googleusercontent.com/image_generation_content/0
